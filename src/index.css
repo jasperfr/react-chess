@@ -1,0 +1,74 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.chess-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 70px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 2px;
+  text-align: center;
+  width: 70px;
+}
+
+.chess-row:nth-of-type(2n) div:nth-of-type(2n+1) .square {
+  background-color: #999;
+}
+.chess-row:nth-of-type(2n+1) div:nth-of-type(2n) .square {
+  background-color: #999;
+}
+
+.square.movable {
+  background-color: #90c0c2 !important;
+  cursor: pointer;
+}
+
+.square.movable:hover {
+  background-color: #324c4d !important;
+}
+
+.square.selected {
+  background-color: #e0daa1 !important;
+}
+
+.square img {
+  width: 64px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
